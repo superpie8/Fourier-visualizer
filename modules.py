@@ -10,6 +10,7 @@ modules for the fourier series solver program
 import math
 import numpy as np
 import matplotlib
+import sympy
 
 def base_function(x):
     return x**3
