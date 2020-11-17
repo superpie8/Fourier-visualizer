@@ -8,9 +8,11 @@ modules for the fourier series solver program
 """
 
 import math
-import numpy as np
 import matplotlib
-import sympy
+from sympy import *
+
+x, y, z = symbols('x y z')
+init_printing(use_unicode=True)
 
 def base_function(x):
     return x**3
