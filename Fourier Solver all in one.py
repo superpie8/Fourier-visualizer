@@ -8,7 +8,13 @@ Python Ver: 3.7
 Solves for and plots fourier series and the input function
 """
 
-from modules import *
+import math
+import matplotlib
+from sympy import *
+
+x, y, z = symbols('x y z')
+init_printing(use_unicode=True)
+
 
 function = str(input("Input Function \n"))
 """pfunction = function.replace("x", "(x * L / pi)")"""

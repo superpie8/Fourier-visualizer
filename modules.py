@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov  5 11:44:10 2020
+Author: Caleb Malaer
+Created: 11/05/2020
+Last Edit: 11/19/2020
+Python Ver: 3.7
 
-@author: super
-
-modules for the fourier series solver program
+Modules for the fourier series solver program.
 """
 
 import math
@@ -14,5 +15,3 @@ from sympy import *
 x, y, z = symbols('x y z')
 init_printing(use_unicode=True)
 
-def base_function(x):
-    return x**3
