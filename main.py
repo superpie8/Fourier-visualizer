@@ -10,14 +10,14 @@ Solves for and plots fourier series and the input function
 from modules import *
 
 
-function = str(input("Input Function: "))
+function = str(input("Input Function \n"))
 """pfunction = function.replace("x", "(x * L / pi)")"""
 pfunction = function.replace("^", "**")
 pfunction = sympify(pfunction)
 
 """pprint(pfunction)"""
 
-L = input("L (Interval=[-L, L]): ")
+L = input("L (Interval=[-L, L])  \n")
 L = sympify(L)
 
 a0 = 1/(2*L) * integrate(pfunction, (x, -L, L))
@@ -29,7 +29,7 @@ sterm = bn * sin(z * x * pi / L)
 cterm = an * cos(z * x * pi / L)
 
 series = str(a0)
-N = int(input("Number of terms: "))
+N = int(input("Number of terms \n"))
 n = 1
 cterm = str(cterm)
 sterm = str(sterm)
@@ -51,3 +51,13 @@ P = plot(series, (x,-L, L), show = False, line_color = "red")
 
 P.append(F[0])
 P.show()
+
+k = str(input("Save plot?  y/n \n"))
+
+if k == "y":
+    filename = "./" + input("File name? \n")
+    P.save(filename)
+
+bruh = "8"
+while bruh == "8":
+    bruh = input("Press enter to exit")
